@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>registrar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="alumno"></form>
+      <ion-item>
+        <ion-label position="stacked">Rut</ion-label>
+      <ion-input placeholder="Ingrese Rut" type="text" formControlname="rut"></ion-input>
+    </ion-item>
+    <br>
+      <ion-item>
+        <ion-label position="stacked">Nombre completo</ion-label>
+      <ion-input placeholder="Ingrese Nombre" type="text" formControlname="nom_completo"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-label position="stacked">Fecha nacimiento</ion-label>
+    <ion-input placeholder="ingrese Fecha nacimiento" type="date" formControlname="fecha_nac"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-label position="stacked">Semestre</ion-label>
+    <ion-input placeholder="ingrese semestre" type="number"formControlname="semestre"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-label position="stacked">Contraseña</ion-label>
+    <ion-input placeholder="ingrese Contraseña" type="password"formControlname="password"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-label position="stacked">Contraseña</ion-label>
+    <ion-input placeholder=" ingrese nuevamente Contraseña" type="password"></ion-input>
+    </ion-item>
+    <br>
+    <ion-button type="submit" [disabled]="!alumno.valid">registrar</ion-button>
+  </form>
+</ion-content>
